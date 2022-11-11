@@ -18,7 +18,15 @@ export default class Details extends Component {
   render() {
     const { x, loading } = this.state;
     return (
-      loading ? <Header /> : (
+      loading ? (
+        <div>
+          <Header />
+          {' '}
+          <br />
+          {' '}
+          <h1>Carregando</h1>
+        </div>
+      ) : (
         <div>
           <Header />
           <UserCard
