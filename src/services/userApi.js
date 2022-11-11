@@ -21,12 +21,12 @@ export const getUser = () => new Promise((resolve) => {
 
 export const createUser = (user) => new Promise((resolve) => {
   const emptyUser = {
-    gordolaName: '',
-    gordolaDescription: '',
-    gordolaAttr1: '',
-    gordolaAttr2: '',
-    gordolaAttr3: '',
-    gordolaImage: '',
+    userName: '',
+    userDescription: '',
+    userAttr1: '',
+    userAttr2: '',
+    userAttr3: '',
+    userImage: '',
   };
   saveUser({ ...emptyUser, ...user });
   simulateRequest(SUCCESS_STATUS)(resolve);

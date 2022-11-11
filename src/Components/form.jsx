@@ -4,31 +4,31 @@ import { Component } from 'react';
 export default class Form extends Component {
   render() {
     const {
-      gordolaName, gordolaDescription, gordolaAttr1, gordolaAttr2,
-      gordolaAttr3, gordolaImage, isSaveButtonDisabled,
+      userName, userDescription, userAttr1, userAttr2,
+      userAttr3, userImage, isSaveButtonDisabled,
       onInputChange, onSaveButtonClick } = this.props;
     return (
       <form className="form form-group" action="get">
         <div className="form-group nameText">
-          <label htmlFor="gordolaName">
+          <label htmlFor="userName">
             <strong>Nome</strong>
             <input
               className="form-control"
               type="text"
               data-testid="name-input"
-              name="gordolaName"
-              value={ gordolaName }
+              name="userName"
+              value={ userName }
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="gordolaDescription">
+          <label htmlFor="userDescription">
             <strong>Descrição</strong>
             <textarea
               className="form-control textarea"
               data-testid="description-input"
-              name="gordolaDescription"
+              name="userDescription"
               rows={ 3 }
-              value={ gordolaDescription }
+              value={ userDescription }
               onChange={ onInputChange }
             />
           </label>
@@ -36,7 +36,7 @@ export default class Form extends Component {
         <hr />
         <div className="atribute">
           <div className="form-group row">
-            <label htmlFor="gordolaAttr1">
+            <label htmlFor="userAttr1">
               <strong>Idade</strong>
               <input
                 max={ 120 }
@@ -44,14 +44,14 @@ export default class Form extends Component {
                 className="form-control"
                 type="number"
                 data-testid="attr1-input"
-                name="gordolaAttr1"
-                value={ gordolaAttr1 }
+                name="userAttr1"
+                value={ userAttr1 }
                 onChange={ onInputChange }
               />
             </label>
           </div>
           <div className="form-group row">
-            <label htmlFor="gordolaAttr2">
+            <label htmlFor="userAttr2">
               <strong>peso</strong>
               <input
                 max={ 200 }
@@ -59,14 +59,14 @@ export default class Form extends Component {
                 className="form-control"
                 type="number"
                 data-testid="attr2-input"
-                name="gordolaAttr2"
-                value={ gordolaAttr2 }
+                name="userAttr2"
+                value={ userAttr2 }
                 onChange={ onInputChange }
               />
             </label>
           </div>
           <div className="form-group row">
-            <label htmlFor="gordolaAttr3">
+            <label htmlFor="userAttr3">
               <strong>altura</strong>
               <input
                 max={ 90 }
@@ -74,23 +74,23 @@ export default class Form extends Component {
                 className="form-control"
                 type="text"
                 data-testid="attr3-input"
-                name="gordolaAttr3"
-                value={ gordolaAttr3 }
+                name="userAttr3"
+                value={ userAttr3 }
                 onChange={ onInputChange }
               />
             </label>
           </div>
         </div>
         <hr />
-        <label htmlFor="gordolaImage">
+        <label htmlFor="userImage">
           <strong>Informe o link de uma foto sua</strong>
           <div className="form-group">
             <input
               className="form-control-file"
               type="text"
-              name="gordolaImage"
+              name="userImage"
               data-testid="image-input"
-              value={ gordolaImage }
+              value={ userImage }
               onChange={ onInputChange }
             />
           </div>

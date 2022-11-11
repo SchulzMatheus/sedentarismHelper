@@ -11,7 +11,7 @@ export default class Details extends Component {
     return (
       <div>
         <Header />
-        <div>Gordola details</div>
+        <div>user details</div>
       </div>
     );
   }

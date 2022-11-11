@@ -5,13 +5,13 @@ import { createUser } from '../services/userApi';
 
 export default class Shopcart extends Component {
   state = {
-    gordolaName: '',
-    gordolaDescription: '',
-    gordolaAttr1: '',
-    gordolaAttr2: '',
-    gordolaAttr3: '',
-    gordolaImage: '',
-    gordola: [],
+    userName: '',
+    userDescription: '',
+    userAttr1: '0',
+    userAttr2: '0',
+    userAttr3: '0',
+    userImage: '',
+    user: [],
     redirect: false,
   };
 
@@ -26,46 +26,40 @@ export default class Shopcart extends Component {
   onSaveButtonClick = async (event) => {
     event.preventDefault();
     const {
-      gordolaName, gordolaDescription, gordolaAttr1, gordolaAttr2, gordolaAttr3,
-      gordolaImage, gordola } = this.state;
+      userName, userDescription, userAttr1, userAttr2, userAttr3,
+      userImage, user } = this.state;
 
-    await createUser({ gordolaName,
-      gordolaDescription,
-      gordolaAttr1,
-      gordolaAttr2,
-      gordolaAttr3,
-      gordolaImage });
+    await createUser({ userName,
+      userDescription,
+      userAttr1,
+      userAttr2,
+      userAttr3,
+      userImage });
 
     this.setState({
       redirect: true,
-      gordolaName: '',
-      gordolaDescription: '',
-      gordolaAttr1: '0',
-      gordolaAttr2: '0',
-      gordolaAttr3: '0',
-      gordolaImage: 'https://picsum.photos/200/300',
     });
 
-    gordola.push({
-      gordolaName,
-      gordolaDescription,
-      gordolaAttr1,
-      gordolaAttr2,
-      gordolaAttr3,
-      gordolaImage,
+    user.push({
+      userName,
+      userDescription,
+      userAttr1,
+      userAttr2,
+      userAttr3,
+      userImage,
     });
   };
 
   render() {
     const {
-      gordolaName, gordolaDescription, gordolaAttr1, gordolaAttr2, gordolaAttr3,
-      gordolaImage, gordola, redirect,
+      userName, userDescription, userAttr1, userAttr2, userAttr3,
+      userImage, user, redirect,
     } = this.state;
     const maxBuild = 8000000;
     const maxStats = 9000000;
-    const auxAtt = [gordolaAttr1, gordolaAttr2, gordolaAttr3];
-    const aux = [gordolaName, gordolaImage, gordolaDescription];
-    const build = Number(gordolaAttr1) + Number(gordolaAttr2) + Number(gordolaAttr3);
+    const auxAtt = [userAttr1, userAttr2, userAttr3];
+    const aux = [userName, userImage, userDescription];
+    const build = Number(userAttr1) + Number(userAttr2) + Number(userAttr3);
     if (redirect) {
       return <Redirect to="/details" />;
     }
@@ -73,18 +67,18 @@ export default class Shopcart extends Component {
       <div>
         <div>
           <Form
-            gordolaName={ gordolaName }
-            gordolaDescription={ gordolaDescription }
-            gordolaAttr1={ gordolaAttr1 }
-            gordolaAttr2={ gordolaAttr2 }
-            gordolaAttr3={ gordolaAttr3 }
-            gordolaImage={ gordolaImage }
+            userName={ userName }
+            userDescription={ userDescription }
+            userAttr1={ userAttr1 }
+            userAttr2={ userAttr2 }
+            userAttr3={ userAttr3 }
+            userImage={ userImage }
             onInputChange={ this.handleChange }
             onSaveButtonClick={ this.onSaveButtonClick }
             isSaveButtonDisabled={ aux.some((e) => e.length <= 0) || build > maxBuild
               || auxAtt.some((attr) => attr < 0)
               || auxAtt.some((attr) => attr > maxStats)
-              || gordola.length >= 1 }
+              || user.length >= 1 }
           />
         </div>
       </div>
