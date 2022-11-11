@@ -3,13 +3,14 @@ import Header from './Header';
 import { getUser } from '../services/userApi';
 import UserCard from '../Components/userCard';
 
-export default class Details extends Component {
+export default class DetailsPesoIdeal extends Component {
   state = {
     x: {},
     loading: false,
   };
 
   async componentDidMount() {
+    console.log(getUser());
     this.setState({ loading: true });
     const y = await getUser();
     this.setState({ x: y, loading: false });
@@ -38,10 +39,19 @@ export default class Details extends Component {
             userAttr3={ x.userAttr3 }
             userImage={ x.userImage }
           />
+          <iframe
+            width="853"
+            height="480"
+            src="https://www.youtube.com/embed/eIGij1zGYFg"
+            title="Jojo Maronttinni, DJ Batata - Agora O Pau Vai Torar"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+              picture-in-picture"
+          />
         </div>
       )
     );
   }
 }
 
-Details.propTypes = {}.isRequired;
+DetailsPesoIdeal.propTypes = {}.isRequired;

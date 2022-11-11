@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import prop from 'prop-types';
 // import '../styles/Form.css';
 
 export default class Form extends Component {
@@ -72,7 +73,7 @@ export default class Form extends Component {
                 max={ 90 }
                 min={ 0 }
                 className="form-control"
-                type="text"
+                type="number"
                 data-testid="attr3-input"
                 name="userAttr3"
                 value={ userAttr3 }
@@ -125,4 +126,6 @@ export default class Form extends Component {
   }
 }
 
-Form.propTypes = {}.isRequired;
+Form.propTypes = {
+  userAttr3: prop.number,
+}.isRequired;
