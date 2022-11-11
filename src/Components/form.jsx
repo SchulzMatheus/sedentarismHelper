@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import prop from 'prop-types';
-// import '../styles/Form.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class Form extends Component {
   render() {
@@ -19,17 +19,6 @@ export default class Form extends Component {
               data-testid="name-input"
               name="userName"
               value={ userName }
-              onChange={ onInputChange }
-            />
-          </label>
-          <label htmlFor="userDescription">
-            <strong>Descrição</strong>
-            <textarea
-              className="form-control textarea"
-              data-testid="description-input"
-              name="userDescription"
-              rows={ 3 }
-              value={ userDescription }
               onChange={ onInputChange }
             />
           </label>
@@ -95,6 +84,18 @@ export default class Form extends Component {
               onChange={ onInputChange }
             />
           </div>
+        </label>
+        <hr />
+        <label htmlFor="userDescription">
+          <strong>Descrição</strong>
+          <textarea
+            className="form-control textarea"
+            data-testid="description-input"
+            name="userDescription"
+            rows={ 3 }
+            value={ userDescription }
+            onChange={ onInputChange }
+          />
         </label>
         <hr />
         <label htmlFor="userAtt">
