@@ -82,25 +82,28 @@ export default class Login extends Component {
       }
     }
     return (
-      <div>
-        <div>
-          <Form
-            userName={ userName }
-            userDescription={ userDescription }
-            userAttr1={ userAttr1 }
-            userAttr2={ userAttr2 }
-            userAttr3={ userAttr3 }
-            userImage={ userImage }
-            userAtt={ userAtt }
-            onInputChange={ this.handleChange }
-            onSaveButtonClick={ this.onSaveButtonClick }
-            isSaveButtonDisabled={ aux.some((e) => e.length <= 0) || build > maxBuild
+      <div className="evaluator">
+        <a className="link" href="https://loja.fpbonline.com.br/">
+          <img className="img" src="https://loja.fpbonline.com.br/media/logo/stores/29/FBP.png" alt="" />
+        </a>
+        <h2>Informe os seus dados</h2>
+        <Form
+          userName={ userName }
+          userDescription={ userDescription }
+          userAttr1={ userAttr1 }
+          userAttr2={ userAttr2 }
+          userAttr3={ userAttr3 }
+          userImage={ userImage }
+          userAtt={ userAtt }
+          onInputChange={ this.handleChange }
+          onSaveButtonClick={ this.onSaveButtonClick }
+          isSaveButtonDisabled={ aux.some((e) => e.length <= 0) || build > maxBuild
               || auxAtt.some((attr) => attr < 0)
               || auxAtt.some((attr) => attr > maxStats)
               || user.length >= 1 }
-          />
-        </div>
+        />
       </div>
+
     );
   }
 }
