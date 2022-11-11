@@ -1,14 +1,16 @@
+/* stylelint-disable order/properties-alphabetical-order */
+
+/* stylelint-disable indentation */
 .form-content {
     position: absolute;
     justify-content: center;
     display: flex;
     flex-direction: row;
     width: 50%;
-    display: flex;
     margin-top: 20px;
     background-color: white;
     left: 25%;
-  }
+}
 
 .form {
     padding: 4%;
