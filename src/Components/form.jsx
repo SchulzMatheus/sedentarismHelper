@@ -79,7 +79,7 @@ export default class Form extends Component {
             <strong>Informe o link de uma foto sua</strong>
             <div className="form-group">
               <input
-                className="form-control-file"
+                className="form-control"
                 type="text"
                 name="userImage"
                 data-testid="image-input"
