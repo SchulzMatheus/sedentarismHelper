@@ -5,13 +5,13 @@ export default class Form extends Component {
   render() {
     const {
       userName, userDescription, userAttr1, userAttr2,
-      userAttr3, userImage, isSaveButtonDisabled,
+      userAttr3, userImage, isSaveButtonDisabled, userAtt,
       onInputChange, onSaveButtonClick } = this.props;
     return (
       <form className="form form-group" action="get">
         <div className="form-group nameText">
           <label htmlFor="userName">
-            <strong>Nomee</strong>
+            <strong>Nome</strong>
             <input
               className="form-control"
               type="text"
@@ -96,6 +96,21 @@ export default class Form extends Component {
           </div>
         </label>
         <hr />
+        <label htmlFor="userAtt">
+          <strong>Pratica algum exercicio? </strong>
+          <select
+            className="form-control"
+            name="userAtt"
+            data-testid="rare-input"
+            value={ userAtt }
+            onChange={ onInputChange }
+          >
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+          </select>
+        </label>
+        <br />
+        <hr />
         <button
           className="btn btn-primary saveBtn"
           type="submit"
@@ -104,7 +119,6 @@ export default class Form extends Component {
           onClick={ onSaveButtonClick }
         >
           Salvar
-
         </button>
       </form>
     );

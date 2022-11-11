@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import Form from './pages/login';
+import Form from './pages/Login';
 import Details from './pages/Details';
 
 function App() {

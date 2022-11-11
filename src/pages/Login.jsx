@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import Form from '../Components/form';
 import { createUser } from '../services/userApi';
 
-export default class Shopcart extends Component {
+export default class Login extends Component {
   state = {
     userName: '',
     userDescription: '',
@@ -11,6 +11,7 @@ export default class Shopcart extends Component {
     userAttr2: '0',
     userAttr3: '0',
     userImage: '',
+    userAtt: 'sim',
     user: [],
     redirect: false,
   };
@@ -27,14 +28,16 @@ export default class Shopcart extends Component {
     event.preventDefault();
     const {
       userName, userDescription, userAttr1, userAttr2, userAttr3,
-      userImage, user } = this.state;
+      userImage, user, userAtt } = this.state;
 
     await createUser({ userName,
       userDescription,
       userAttr1,
       userAttr2,
       userAttr3,
-      userImage });
+      userImage,
+      userAtt,
+    });
 
     this.setState({
       redirect: true,
@@ -47,13 +50,14 @@ export default class Shopcart extends Component {
       userAttr2,
       userAttr3,
       userImage,
+      userAtt,
     });
   };
 
   render() {
     const {
       userName, userDescription, userAttr1, userAttr2, userAttr3,
-      userImage, user, redirect,
+      userImage, user, redirect, userAtt,
     } = this.state;
     const maxBuild = 8000000;
     const maxStats = 9000000;
@@ -73,6 +77,7 @@ export default class Shopcart extends Component {
             userAttr2={ userAttr2 }
             userAttr3={ userAttr3 }
             userImage={ userImage }
+            userAtt={ userAtt }
             onInputChange={ this.handleChange }
             onSaveButtonClick={ this.onSaveButtonClick }
             isSaveButtonDisabled={ aux.some((e) => e.length <= 0) || build > maxBuild
