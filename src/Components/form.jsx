@@ -11,7 +11,7 @@ export default class Form extends Component {
       <form className="form form-group" action="get">
         <div className="form-group nameText">
           <label htmlFor="userName">
-            <strong>Nome</strong>
+            <strong>Nomee</strong>
             <input
               className="form-control"
               type="text"
