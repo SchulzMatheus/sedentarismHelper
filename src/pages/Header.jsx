@@ -10,7 +10,7 @@ export default class Products extends Component {
             Form
           </Link>
           <br />
-          <Link data-testid="shopping-cart-button" to="/details">
+          <Link data-testid="shopping-cart-button" to="/details/Abaixo">
             Detalhes
           </Link>
         </nav>
