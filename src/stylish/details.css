@@ -1,0 +1,5 @@
+/* stylelint-disable indentation */
+.video {
+    display: flex;
+    justify-content: space-between;
+}

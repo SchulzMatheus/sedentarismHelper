@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-max-depth */
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../stylish/Header.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -25,21 +26,32 @@ export default class Products extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/details/acima">Acima do peso</Nav.Link>
-              <Nav.Link href="/details/abaixo">Abaixo do peso</Nav.Link>
-              <Nav.Link href="/details/ideal">Peso ideal</Nav.Link>
-              <Nav.Link href="/details/Sobrepeso">Sobrepeso</Nav.Link>
+              <Nav.Link>
+                <Link className="link" to="/details/acima">Acima do Peso</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="link" to="/details/abaixo">Abaixo do Peso</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="link" to="/details/ideal">Peso Ideal</Link>
+              </Nav.Link>
+              <Nav.Link href="/details/Sobrepeso">
+                <Link className="link" to="/details/Sobrepeso">Sobrepeso</Link>
+              </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="/details/userinfo">{ x.userName }</Nav.Link>
               <Nav.Link href="/details/userinfo">
-                <img className="userFoto" src={ x.userImage } alt="Sua foto" />
+                <Link className="link" to="/details/userinfo">{ x.userName }</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="link" to="/details/userinfo">
+                  <img className="userFoto" src={ x.userImage } alt="Sua foto" />
+                </Link>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
     );
   }
 }
