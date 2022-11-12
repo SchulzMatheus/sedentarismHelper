@@ -6,6 +6,8 @@ import DetailsAcima from './pages/DetailsAcimaDoPeso';
 import DetailsAbaixo from './pages/DetailsAbaixoDoPeso';
 import DetailsIdeal from './pages/DetailsPesoIdeal';
 import DetailsSobrePeso from './pages/DetailsSobrepeso';
+import Userinfo from './pages/userPage';
+import NotFound from './Components/Notfound';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Route exact path="/details/Acima" component={ DetailsAcima } />
       <Route exact path="/details/Ideal" component={ DetailsIdeal } />
       <Route exact path="/details/Sobrepeso" component={ DetailsSobrePeso } />
+      <Route exact path="/details/userinfo" component={ Userinfo } />
+      <Route path="/" component={ NotFound } />
     </Switch>
   );
 }

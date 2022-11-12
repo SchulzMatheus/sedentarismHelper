@@ -31,8 +31,8 @@ export default class Products extends Component {
               <Nav.Link href="/details/Sobrepeso">Sobrepeso</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="">{ x.userName }</Nav.Link>
-              <Nav.Link href="">
+              <Nav.Link href="/details/userinfo">{ x.userName }</Nav.Link>
+              <Nav.Link href="/details/userinfo">
                 <img className="userFoto" src={ x.userImage } alt="Sua foto" />
               </Nav.Link>
             </Nav>
