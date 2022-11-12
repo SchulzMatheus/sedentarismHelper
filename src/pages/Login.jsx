@@ -11,7 +11,7 @@ export default class Login extends Component {
     userAttr1: '0',
     userAttr2: '0',
     userAttr3: '0',
-    userImage: '',
+    userImage: 'https://picsum.photos/200/300',
     userAtt: 'sim',
     user: [],
     redirect: false,

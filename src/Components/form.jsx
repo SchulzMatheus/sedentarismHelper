@@ -2,7 +2,7 @@
 import { Component } from 'react';
 import prop from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './stylish/form.css';
+import '../stylish/form.css';
 
 export default class Form extends Component {
   render() {

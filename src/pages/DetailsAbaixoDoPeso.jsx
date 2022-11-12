@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import { getUser } from '../services/userApi';
 import UserCard from '../Components/userCard';
+import '../stylish/details.css';
 
 export default class DetailsAbaixoDoPeso extends Component {
   state = {

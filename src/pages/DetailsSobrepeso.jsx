@@ -11,7 +11,6 @@ export default class DetailsSobrePeso extends Component {
   };
 
   async componentDidMount() {
-    console.log(getUser());
     this.setState({ loading: true });
     const y = await getUser();
     this.setState({ x: y, loading: false });
