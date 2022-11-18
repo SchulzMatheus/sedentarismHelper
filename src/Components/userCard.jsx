@@ -4,7 +4,7 @@ export default class userCard extends Component {
   render() {
     const {
       userName, userDescription,
-      userAttr1, userAttr2, userAttr3, userImage, userAtt } = this.props;
+      userAttr1, userAttr2, userAttr3, userImage, userAtt, imc } = this.props;
     return (
       <div className="userContent">
         <div className="nameImgContent">
@@ -61,6 +61,14 @@ export default class userCard extends Component {
               Pratica Exercicio....................................
               <span className="att1">
                 { userAtt }
+              </span>
+            </p>
+          </div>
+          <div className="att1Content">
+            <p data-testid="attr4-user">
+              imc....................................
+              <span className="att1">
+                { imc }
               </span>
             </p>
           </div>

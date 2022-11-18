@@ -16,7 +16,7 @@ export default class Products extends Component {
   async componentDidMount() {
     this.setState({ loading: true });
     const y = await getUser();
-    this.setState({ x: y, loading: false });
+    this.setState({ x: y, loading: false, aux: y.userAttr3 ** y.userAttr3 });
   }
 
   handleClick = (event) => {
@@ -27,7 +27,7 @@ export default class Products extends Component {
   };
 
   render() {
-    const { x, loading, redirect } = this.state;
+    const { x, loading, redirect, aux } = this.state;
     if (redirect) { return <Redirect to="/" />; }
     return (
       loading ? (
@@ -46,6 +46,7 @@ export default class Products extends Component {
             userAttr2={ x.userAttr2 }
             userAttr3={ x.userAttr3 }
             userImage={ x.userImage }
+            imc={ x.userAttr2 / aux }
           />
           <button type="button" onClick={ this.handleClick }>Editar informações</button>
         </div>
