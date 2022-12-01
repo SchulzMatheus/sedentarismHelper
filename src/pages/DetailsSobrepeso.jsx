@@ -30,15 +30,15 @@ export default class DetailsSobrePeso extends Component {
           <Header />
           <div className="text-content-right">
             <div>
-              <img src="https://o.remove.bg/downloads/c8b494e1-5f8d-49ac-9393-26ebcaf28b99/obeso-removebg-preview.png" alt="Avatar acima do peso" className="avatar" />
+              <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gMnhpicDJGF1z6w5nXxr9riGL_e7KlsRr9kCnDUnVUYZ6S71B-ilBvDQGEP5yK1vN_Uv4KiDmWL1jNPW2DCkEmtbzl4sA=w640-h480" alt="Avatar acima do peso" className="avatar" />
             </div>
             <div className="text">
               <h2>{`Olá ${x.userName}`}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>A informação fornecida indica que você está com sobrepeso</p>
+              <p>As pesquisas indicam que ter um IMC acima do normal pode aumentar as chances de apresentar problemas de saúde sérios, como diabetes tipo 2, doenças do coração, derrames e alguns tipos de câncer.</p>
+              <p>Se você perder um pouco de peso e conseguir se manter assim, pode ser algo positivo. Para muitos, a melhor maneira de conseguir isso é mudando a dieta. O exercício também ajuda, mas precisa estar associado à uma mudança na alimentação.</p>
+              <p>Pequenas mudanças de hábito como reduzir tamanhos das porções ou escolher lanchinhos mais saudáveis e bebidas menos calóricas podem te ajudar a perder peso ou a não engordar.</p>
+              <img src="https://picsum.photos/200/300" alt="" />
             </div>
           </div>
           <div className="embed-responsive embed-responsive-16by9 video">
