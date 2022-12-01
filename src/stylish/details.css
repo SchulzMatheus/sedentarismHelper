@@ -19,6 +19,22 @@
 }
 
 .tabela {
+    justify-content: center;
     width: 450px;
     height: 250px;
 }
+
+@media ( max-width : 851px ) {
+
+    .text-content-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
