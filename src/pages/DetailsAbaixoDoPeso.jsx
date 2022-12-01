@@ -6,6 +6,7 @@ import Loading from '../Components/loading';
 import '../stylish/details.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pesoideal from '../images/pesoideal-removebg-preview.png';
+import table from '../images/índice.jpeg';
 
 export default class DetailsAbaixoDoPeso extends Component {
   state = {
@@ -41,6 +42,7 @@ export default class DetailsAbaixoDoPeso extends Component {
               <p>Pode haver riscos de saúde associados a um IMC baixo, como anemia, osteoporose, um sistema imunológico fraco e problemas de fertilidade.</p>
               <p>Esta não é uma ferramenta de diagnóstico médico, então não se assuste se não é o resultado que você esperava obter.</p>
               <p>Se você está preocupado com seu peso, procure um médico.</p>
+              <img className="tabela" src={ table } alt="" />
               <br />
             </div>
           </div>

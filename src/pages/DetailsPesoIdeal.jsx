@@ -5,6 +5,7 @@ import { getUser } from '../services/userApi';
 import Loading from '../Components/loading';
 import '../stylish/details.css';
 import pesoideal from '../images/pesoideal-removebg-preview.png';
+import table from '../images/índice.jpeg';
 
 export default class DetailsPesoIdeal extends Component {
   state = {
@@ -39,6 +40,7 @@ export default class DetailsPesoIdeal extends Component {
               <p>Seu peso está na faixa normal, o que é ótimo. Pesquisas mostram que ter um IMC normal pode reduzir as chances de apresentar problemas de saúde sérios, como diabetes tipo 2, doenças do coração, derrames e alguns tipos de câncer.</p>
               <p>Mas nem todas pessoas com IMC nesta faixa estão livres dessas doenças.Outros fatores que podem aumentar os riscos dessas enfermidades são fumar, pressão e colesterol altos.</p>
               <p>Somos mais propensos a ganhar peso quando envelhecemos, então para manter um peso normal pode ser necessário fazer algumas mudanças na sua dieta ou em sua rotina de atividades com o passar dos anos.</p>
+              <img className="tabela" src={ table } alt="" />
               <br />
             </div>
           </div>

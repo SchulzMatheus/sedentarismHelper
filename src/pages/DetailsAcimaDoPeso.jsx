@@ -5,6 +5,7 @@ import { getUser } from '../services/userApi';
 import Loading from '../Components/loading';
 import '../stylish/details.css';
 import imgAcimaDoPeso from '../images/semFundoObSob.png';
+import table from '../images/índice.jpeg';
 
 export default class DetailsAcimaDoPeso extends Component {
   state = {
@@ -39,6 +40,7 @@ export default class DetailsAcimaDoPeso extends Component {
               <p>A informação fornecida indica que você está obeso</p>
               <p>As pesquisas indicam que ter um IMC acima do normal pode aumentar as chances de apresentar problemas de saúde sérios, como diabetes tipo 2, doenças do coração, derrames e alguns tipos de câncer.</p>
               <p>Se você perder um pouco de peso e conseguir se manter assim, pode ser algo positivo. Para muitos, a melhor maneira de conseguir isso é mudando a dieta. O exercício também ajuda, mas precisa estar associado à uma mudança na alimentação.</p>
+              <img className="tabela" src={ table } alt="" />
               <br />
             </div>
           </div>
