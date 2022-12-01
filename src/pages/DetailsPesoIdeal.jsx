@@ -4,6 +4,7 @@ import Header from './Header';
 import { getUser } from '../services/userApi';
 import Loading from '../Components/loading';
 import '../stylish/details.css';
+import pesoideal from '../images/pesoideal-removebg-preview.png';
 
 export default class DetailsPesoIdeal extends Component {
   state = {
@@ -27,19 +28,18 @@ export default class DetailsPesoIdeal extends Component {
           <Loading />
         </div>
       ) : (
-        <div>
+        <div className="main-content">
           <Header />
           <div className="text-content-right">
             <div>
-              <img src="https://o.remove.bg/downloads/82500314-7dae-4369-86fc-a85d7f23bb89/pesoIdeal-removebg-preview.png" alt="Avatar acima do peso" className="avatar" />
+              <img src={ pesoideal } alt="Avatar acima do peso" className="avatar" />
             </div>
             <div className="text">
               <h2>{`Olá ${x.userName}`}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Seu peso está na faixa normal, o que é ótimo. Pesquisas mostram que ter um IMC normal pode reduzir as chances de apresentar problemas de saúde sérios, como diabetes tipo 2, doenças do coração, derrames e alguns tipos de câncer.</p>
+              <p>Mas nem todas pessoas com IMC nesta faixa estão livres dessas doenças.Outros fatores que podem aumentar os riscos dessas enfermidades são fumar, pressão e colesterol altos.</p>
+              <p>Somos mais propensos a ganhar peso quando envelhecemos, então para manter um peso normal pode ser necessário fazer algumas mudanças na sua dieta ou em sua rotina de atividades com o passar dos anos.</p>
+              <br />
             </div>
           </div>
           <div className="embed-responsive embed-responsive-16by9 video">

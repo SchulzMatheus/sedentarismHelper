@@ -4,6 +4,7 @@ import Header from './Header';
 import Loading from '../Components/loading';
 import { getUser } from '../services/userApi';
 import '../stylish/details.css';
+import imgAcimaDoPeso from '../images/semFundoObSob.png';
 
 export default class DetailsSobrePeso extends Component {
   state = {
@@ -26,11 +27,11 @@ export default class DetailsSobrePeso extends Component {
           <Loading />
         </div>
       ) : (
-        <div>
+        <div className="main-content">
           <Header />
           <div className="text-content-right">
             <div>
-              <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gMnhpicDJGF1z6w5nXxr9riGL_e7KlsRr9kCnDUnVUYZ6S71B-ilBvDQGEP5yK1vN_Uv4KiDmWL1jNPW2DCkEmtbzl4sA=w640-h480" alt="Avatar acima do peso" className="avatar" />
+              <img src={ imgAcimaDoPeso } alt="Avatar acima do peso" className="avatar" />
             </div>
             <div className="text">
               <h2>{`Olá ${x.userName}`}</h2>
@@ -39,6 +40,7 @@ export default class DetailsSobrePeso extends Component {
               <p>Se você perder um pouco de peso e conseguir se manter assim, pode ser algo positivo. Para muitos, a melhor maneira de conseguir isso é mudando a dieta. O exercício também ajuda, mas precisa estar associado à uma mudança na alimentação.</p>
               <p>Pequenas mudanças de hábito como reduzir tamanhos das porções ou escolher lanchinhos mais saudáveis e bebidas menos calóricas podem te ajudar a perder peso ou a não engordar.</p>
               <img src="https://picsum.photos/200/300" alt="" />
+              <br />
             </div>
           </div>
           <div className="embed-responsive embed-responsive-16by9 video">

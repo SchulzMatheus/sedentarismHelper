@@ -5,6 +5,7 @@ import { getUser } from '../services/userApi';
 import Loading from '../Components/loading';
 import '../stylish/details.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import pesoideal from '../images/pesoideal-removebg-preview.png';
 
 export default class DetailsAbaixoDoPeso extends Component {
   state = {
@@ -28,19 +29,19 @@ export default class DetailsAbaixoDoPeso extends Component {
           <Loading />
         </div>
       ) : (
-        <div>
+        <div className="main-content">
           <Header />
           <div className="text-content-right">
             <div>
-              <img src="https://o.remove.bg/downloads/00ff2c40-f19c-4d5c-917e-15c09570cf06/magro-removebg-preview.png" alt="Avatar acima do peso" className="avatar" />
+              <img src={ pesoideal } alt="Avatar acima do peso" className="avatar" />
             </div>
             <div className="text">
               <h2>{`Olá ${x.userName}`}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>A informação fornecida indica que seu peso pode estar abaixo do normal.</p>
+              <p>Pode haver riscos de saúde associados a um IMC baixo, como anemia, osteoporose, um sistema imunológico fraco e problemas de fertilidade.</p>
+              <p>Esta não é uma ferramenta de diagnóstico médico, então não se assuste se não é o resultado que você esperava obter.</p>
+              <p>Se você está preocupado com seu peso, procure um médico.</p>
+              <br />
             </div>
           </div>
           <div className="embed-responsive embed-responsive-16by9 video">
