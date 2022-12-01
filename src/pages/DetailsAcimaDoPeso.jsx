@@ -59,6 +59,20 @@ export default class DetailsAcimaDoPeso extends Component {
               allowFullScreen
               frameBorder="50"
             />
+            <iframe
+              title="third"
+              className="embed-responsive-item"
+              src="https://www.youtube.com/embed/KhII7WhJAzU"
+              allowFullScreen
+              frameBorder="50"
+            />
+            <iframe
+              title="fourth"
+              className="embed-responsive-item"
+              src="https://www.youtube.com/embed/C7F2FHgBRrs"
+              allowFullScreen
+              frameBorder="50"
+            />
           </div>
         </div>
       )
