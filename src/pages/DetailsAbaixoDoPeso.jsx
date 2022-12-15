@@ -18,7 +18,7 @@ export default class DetailsAbaixoDoPeso extends Component {
     console.log(getUser());
     this.setState({ loading: true });
     const y = await getUser();
-    this.setState({ x: y, loading: false, aux: y.userAttr3 ** y.userAttr3 });
+    this.setState({ x: y, loading: false, aux: y.userAttr3 * y.userAttr3 });
   }
 
   render() {
