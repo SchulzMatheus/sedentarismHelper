@@ -17,11 +17,13 @@ export default class DetailsAcimaDoPeso extends Component {
     console.log(getUser());
     this.setState({ loading: true });
     const y = await getUser();
-    this.setState({ x: y, loading: false });
+    this.setState({ x: y, loading: false, aux: y.userAttr3 ** y.userAttr3 });
   }
 
   render() {
-    const { x, loading } = this.state;
+    const { x, loading, aux } = this.state;
+    const imc = x.userAttr2 / aux;
+    const imcFormat = imc.toFixed(2);
     return (
       loading ? (
         <div>
@@ -36,7 +38,7 @@ export default class DetailsAcimaDoPeso extends Component {
               <img src={ imgAcimaDoPeso } alt="Avatar acima do peso" className="avatar" />
             </div>
             <div className="text">
-              <h2>{`Olá ${x.userName}`}</h2>
+              <h2>{`Olá ${x.userName} seu imc é ${imcFormat}`}</h2>
               <p>A informação fornecida indica que você está obeso</p>
               <p>As pesquisas indicam que ter um IMC acima do normal pode aumentar as chances de apresentar problemas de saúde sérios, como diabetes tipo 2, doenças do coração, derrames e alguns tipos de câncer.</p>
               <p>Se você perder um pouco de peso e conseguir se manter assim, pode ser algo positivo. Para muitos, a melhor maneira de conseguir isso é mudando a dieta. O exercício também ajuda, mas precisa estar associado à uma mudança na alimentação.</p>

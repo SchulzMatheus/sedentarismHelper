@@ -18,11 +18,13 @@ export default class DetailsAbaixoDoPeso extends Component {
     console.log(getUser());
     this.setState({ loading: true });
     const y = await getUser();
-    this.setState({ x: y, loading: false });
+    this.setState({ x: y, loading: false, aux: y.userAttr3 ** y.userAttr3 });
   }
 
   render() {
-    const { x, loading } = this.state;
+    const { x, loading, aux } = this.state;
+    const imc = x.userAttr2 / aux;
+    const imcFormat = imc.toFixed(2);
     return (
       loading ? (
         <div>
@@ -37,7 +39,7 @@ export default class DetailsAbaixoDoPeso extends Component {
               <img src={ pesoideal } alt="Avatar acima do peso" className="avatar" />
             </div>
             <div className="text">
-              <h2>{`Olá ${x.userName}`}</h2>
+              <h2>{`Olá ${x.userName} seu imc é ${imcFormat}`}</h2>
               <p>A informação fornecida indica que seu peso pode estar abaixo do normal.</p>
               <p>Pode haver riscos de saúde associados a um IMC baixo, como anemia, osteoporose, um sistema imunológico fraco e problemas de fertilidade.</p>
               <p>Esta não é uma ferramenta de diagnóstico médico, então não se assuste se não é o resultado que você esperava obter.</p>

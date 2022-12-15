@@ -17,11 +17,13 @@ export default class DetailsPesoIdeal extends Component {
     console.log(getUser());
     this.setState({ loading: true });
     const y = await getUser();
-    this.setState({ x: y, loading: false });
+    this.setState({ x: y, loading: false, aux: y.userAttr3 ** y.userAttr3 });
   }
 
   render() {
-    const { x, loading } = this.state;
+    const { x, loading, aux } = this.state;
+    const imc = x.userAttr2 / aux;
+    const imcFormat = imc.toFixed(2);
     return (
       loading ? (
         <div>
@@ -36,7 +38,7 @@ export default class DetailsPesoIdeal extends Component {
               <img src={ pesoideal } alt="Avatar acima do peso" className="avatar" />
             </div>
             <div className="text">
-              <h2>{`Olá ${x.userName}`}</h2>
+              <h2>{`Olá ${x.userName} seu imc é ${imcFormat}`}</h2>
               <p>Seu peso está na faixa normal, o que é ótimo. Pesquisas mostram que ter um IMC normal pode reduzir as chances de apresentar problemas de saúde sérios, como diabetes tipo 2, doenças do coração, derrames e alguns tipos de câncer.</p>
               <p>Mas nem todas pessoas com IMC nesta faixa estão livres dessas doenças.Outros fatores que podem aumentar os riscos dessas enfermidades são fumar, pressão e colesterol altos.</p>
               <p>Somos mais propensos a ganhar peso quando envelhecemos, então para manter um peso normal pode ser necessário fazer algumas mudanças na sua dieta ou em sua rotina de atividades com o passar dos anos.</p>
