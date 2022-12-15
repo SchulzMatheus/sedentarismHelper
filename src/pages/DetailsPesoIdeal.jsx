@@ -47,7 +47,13 @@ export default class DetailsPesoIdeal extends Component {
             </div>
           </div>
           <div className="embed-responsive embed-responsive-16by9 video">
-            <h2>videos here</h2>
+            <iframe
+              title="second"
+              className="embed-responsive-item"
+              src="https://www.youtube.com/embed/MrGTT44m3Js"
+              allowFullScreen
+              frameBorder="50"
+            />
           </div>
         </div>
       )
