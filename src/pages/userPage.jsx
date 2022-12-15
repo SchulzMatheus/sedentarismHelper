@@ -5,6 +5,7 @@ import UserCard from '../Components/userCard';
 import { getUser } from '../services/userApi';
 import Loading from '../Components/loading';
 import Header from './Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class Products extends Component {
   state = {
@@ -48,7 +49,14 @@ export default class Products extends Component {
             userImage={ x.userImage }
             imc={ x.userAttr2 / aux }
           />
-          <button type="button" onClick={ this.handleClick }>Editar informações</button>
+          <button
+            className="btn btn-primary saveBtn"
+            type="button"
+            onClick={ this.handleClick }
+          >
+            Editar informações
+
+          </button>
         </div>
       )
     );
